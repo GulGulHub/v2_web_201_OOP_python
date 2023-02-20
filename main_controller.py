@@ -58,8 +58,9 @@ syllabus = {3:"678", 4:"help", 5:"me"}
 
 subject = SchoolSubject("Physics")
 subject.put_syllabus("Intro",5)
+print(subject.syllabus)
 
 
 school_subjects = SchoolSubjects(subject)
 
-school_subjects.get_syllabus_all()
+school_subjects.get_syllabus_all(subject.syllabus)

@@ -8,5 +8,6 @@ class TestSchoolSubjects:
     def test_get_syllabus_all(self):
         subject_maths = SchoolSubject("Maths")
         subject_maths.put_syllabus("Intro", 5)
-        school_subjects = SchoolSubjects("Maths", subject_maths.syllabus)
-        assert school_subjects.get_syllabus_all() == 5, "Intro"
+        print(subject_maths.syllabus)
+        school_subjects = SchoolSubjects("Maths")
+        assert school_subjects.get_syllabus_all(subject_maths.syllabus) == "5, Intro"
